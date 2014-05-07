@@ -13,7 +13,7 @@ header("Cache-Control: no-cache, must-revalidate");
 header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
 
 if(isset($_GET['w'])) {
-    $job_file_location = '/some/publicly/accessible/directory/j.txt';
+    $job_file_location = '/full/path/to/where/StratumServer/writes/jobdata/j.txt';
     if(($data = file_get_contents($job_file_location)) !== false) {
         echo $data;
     }
