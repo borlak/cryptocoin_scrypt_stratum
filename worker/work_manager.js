@@ -4,11 +4,11 @@ var workers = new Array();
 var debug = false;          // if true you will see console messages from work manager and worker
 
 /**
- * Periodically gets work from the public file that the server writes to.  Make sure you are doing
- * requests often enough, as some pools may send out new jobs every 10 seconds, or every minute, etc.
+ * Periodically gets work from the public w.php script.  Make sure you are doing requests often enough, 
+ * as some pools may send out new jobs every 10 seconds, or every minute, etc.
  */
 function getWork() {
-    // quick example of how you might not have logged in users mine
+    // quick example of how you might have it so that logged in users don't mine
     /*
     if(document.cookie.indexOf('logged_in=') >= 0) {
         for(var i = 0; i < workers.length; i++) {
